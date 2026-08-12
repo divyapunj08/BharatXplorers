@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== THEME: VIBRANT (default) ===== */
+[data-theme="vibrant"], :root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a2e;
+  --accent: #ff6b35;
+  --accent2: #f7c948;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
+  --border: #2a2a3e;
+  --gradient: linear-gradient(135deg, #ff6b35, #f7c948);
+}
+
+/* ===== THEME: DARK ===== */
+[data-theme="dark"] {
+  --bg-primary: #050508;
+  --bg-secondary: #0d0d14;
+  --bg-card: #111118;
+  --accent: #6c63ff;
+  --accent2: #00d4ff;
+  --text-primary: #ffffff;
+  --text-secondary: #8888aa;
+  --border: #1e1e2e;
+  --gradient: linear-gradient(135deg, #6c63ff, #00d4ff);
+}
+
+/* ===== THEME: WARM ===== */
+[data-theme="warm"] {
+  --bg-primary: #1a0a00;
+  --bg-secondary: #2d1200;
+  --bg-card: #3d1f00;
+  --accent: #ff9500;
+  --accent2: #ffcc02;
+  --text-primary: #fff8f0;
+  --text-secondary: #c4956a;
+  --border: #5a3010;
+  --gradient: linear-gradient(135deg, #ff9500, #ffcc02);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+.accent-text { color: var(--accent); }
+.accent2-text { color: var(--accent2); }
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: var(--gradient);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btn-primary:hover { opacity: 0.9; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+
+.gradient-text {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow {
+  box-shadow: 0 0 30px color-mix(in srgb, var(--accent) 30%, transparent);
+}
