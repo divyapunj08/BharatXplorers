@@ -1,8 +1,7 @@
 "use client";
+import { useState, useEffect, Suspense } from "react";
 import PexelsImage from "../components/PexelsImage";
-import { useState, useEffect } from "react";
 import { supabase } from "../lib/supabase";
-
 const POPULAR = [
   "hidden beaches", "mountain villages", "heritage forts",
   "tribal culture", "budget backpacking", "spiritual temples",
@@ -19,7 +18,7 @@ const crowdColor: Record<string, string> = {
 
 import { useSearchParams } from "next/navigation";
 
-export default function Discover() {
+function DiscoverPage() {
   const searchParams = useSearchParams();
   const [query, setQuery] = useState(searchParams.get("q") || "");
   const [gems, setGems] = useState<any[]>([]);
@@ -287,5 +286,12 @@ export default function Discover() {
         </div>
       )}
     </div>
+  );
+}
+export default function Discover() {
+  return (
+    <Suspense fallback={<div style={{ background: "var(--bg-primary)", minHeight: "100vh" }} />}>
+      <DiscoverPage />
+    </Suspense>
   );
 }
