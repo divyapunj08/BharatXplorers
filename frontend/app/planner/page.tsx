@@ -112,7 +112,7 @@ export default function Planner() {
         <div style={{ maxWidth: "700px", margin: "0 auto", padding: "40px 24px 100px", position: "relative", zIndex: 1 }}>
           <a href="/" style={{ color: "var(--text-secondary)", textDecoration: "none", fontSize: "14px" }}>← Back to Home</a>
           <h1 style={{
-            fontFamily: "'Playfair Display', serif", fontSize: "52px", fontWeight: 900, marginTop: "16px",
+            fontFamily: "'Playfair Display', serif", fontSize: "clamp(32px, 6vw, 52px)", fontWeight: 900, marginTop: "16px",
             background: "var(--gradient)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent"
           }}>AI Trip Planner</h1>
           <p style={{ color: "var(--text-secondary)", marginBottom: "40px" }}>Your story begins here. Fill in the details.</p>
@@ -269,7 +269,7 @@ export default function Planner() {
 
           {/* 3 COLUMN LAYOUT */}
           {day && (
-            <div style={{ display: "grid", gridTemplateColumns: "280px 1fr 280px", gap: "0", minHeight: "100vh" }}>
+            <div className="planner-grid" style={{ display: "grid", gridTemplateColumns: "280px 1fr 280px", gap: "0", minHeight: "100vh" }}>
 
               {/* LEFT SIDEBAR — Hotels */}
               <div style={{ background: "var(--bg-secondary)", borderRight: "1px solid var(--border)", padding: "24px 20px", overflowY: "auto" }}>

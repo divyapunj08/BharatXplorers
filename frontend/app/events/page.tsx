@@ -178,7 +178,7 @@ export default function Events() {
           </div>
 
           {/* 2 col layout */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
+          <div className="events-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
 
             {/* Left — Event cards */}
             <div>

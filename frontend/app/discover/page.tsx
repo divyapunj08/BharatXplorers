@@ -155,9 +155,9 @@ function DiscoverPage() {
 
       {/* Results */}
       {!loading && gems.length > 0 && (
-        <div style={{
-          display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "24px", padding: "32px 40px 80px",
+<div className="discover-grid" style={{
+  display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
+  gap: "24px", padding: "32px 20px 80px",
           position: "relative", zIndex: 1
         }}>
           {gems.map((gem, i) => (

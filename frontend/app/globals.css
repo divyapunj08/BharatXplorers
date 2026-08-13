@@ -112,3 +112,34 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
   nav input { max-width: 160px !important; }
 }
 
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  /* Hide nav links on mobile */
+  .nav-links { display: none !important; }
+
+  /* Discover page grid */
+  .discover-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Shopping 3 col → 1 col */
+  .shopping-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Events 2 col → 1 col */
+  .events-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Night tourism 2 col → 1 col */
+  .night-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Planner 3 col → 1 col */
+  .planner-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

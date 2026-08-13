@@ -192,12 +192,12 @@ export default function Chat() {
       </div>
 
       {/* Suggestion chips */}
-      {messages.length === 1 && (
-        <div style={{
-          position: "fixed", bottom: "80px", left: 0, right: 0, zIndex: 10,
-          padding: "0 24px 12px", maxWidth: "800px", margin: "0 auto",
-          display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "center"
-        }}>
+{messages.length === 1 && (
+  <div style={{
+    position: "relative", bottom: "auto",
+    padding: "12px 24px", maxWidth: "800px", margin: "0 auto",
+    display: "flex", flexWrap: "wrap", gap: "8px", justifyContent: "center"
+  }}>
           {STARTERS.map((s) => (
             <button key={s} onClick={() => send(s)}
               style={{

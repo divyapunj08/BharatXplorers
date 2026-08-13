@@ -160,7 +160,7 @@ export default function Nightlife() {
           </div>
 
           {/* 2 column layout */}
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
+          <div className="night-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "32px" }}>
 
             {/* Left — Cards */}
             <div>
@@ -184,10 +184,11 @@ export default function Nightlife() {
                 >
                   {/* Image */}
                   <div style={{ position: "relative" }}>
-<PexelsImage query={item.name + " " + item.city + " india night"}
-  width={400} height={180}
-  style={{ width: "100%", height: "180px", display: "block" }}
-  alt={item.name} />
+                    <PexelsImage query={item.name + " " + item.city + " india night"}
+                    width={400} height={180}
+                    style={{ width: "100%", height: "180px", display: "block" }}
+                    alt={item.name} />
+                      
                     <div style={{
                       position: "absolute", inset: 0,
                       background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%)",

@@ -283,7 +283,7 @@ if (budget && Number(budget) > 0) {
       {/* Results — 3 column layout */}
       {!loading && searched && (famousMarkets.length > 0 || hiddenGems.length > 0) && (
         <div style={{ padding: "32px 40px 80px", position: "relative", zIndex: 1 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr 1fr", gap: "24px" }}>
+          <div className="shopping-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr 1fr", gap: "24px" }}>
 
             {/* LEFT — Famous Markets */}
             <div>
