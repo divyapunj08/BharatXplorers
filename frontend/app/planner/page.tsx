@@ -144,10 +144,29 @@ export default function Planner() {
 
             <div>
               <label style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-secondary)", display: "block", marginBottom: "8px" }}>Travelling As</label>
-              <div style={{ display: "flex", gap: "10px" }}>
-                {["solo", "couple", "family", "friends"].map((g) => (
-                  <button key={g} onClick={() => setForm({ ...form, group: g })}
-                    style={{ padding: "10px 20px", borderRadius: "50px", fontSize: "13px", fontWeight: 600, cursor: "pointer", background: form.group === g ? "var(--gradient)" : "var(--bg-secondary)", color: form.group === g ? "white" : "var(--text-secondary)", border: form.group === g ? "none" : "1px solid var(--border)" }}>
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr 1fr",
+                  gap: "10px",
+                  width: "fit-content"
+                }}
+              >
+                {["solo", "family", "couple", "friends"].map((g) => (
+                  <button
+                    key={g}
+                    onClick={() => setForm({ ...form, group: g })}
+                    style={{
+                      padding: "10px 20px",
+                      borderRadius: "50px",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      cursor: "pointer",
+                      background: form.group === g ? "var(--gradient)" : "var(--bg-secondary)",
+                      color: form.group === g ? "white" : "var(--text-secondary)",
+                      border: form.group === g ? "none" : "1px solid var(--border)"
+                    }}
+                  >
                     {g.charAt(0).toUpperCase() + g.slice(1)}
                   </button>
                 ))}
