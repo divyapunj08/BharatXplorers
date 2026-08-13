@@ -105,3 +105,10 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; }
 .glow {
   box-shadow: 0 0 30px color-mix(in srgb, var(--accent) 30%, transparent);
 }
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .nav-links { display: none !important; }
+  
+  nav input { max-width: 160px !important; }
+}
+

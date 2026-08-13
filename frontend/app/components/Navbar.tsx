@@ -146,10 +146,10 @@ useEffect(() => {
     </div>
   )}
 </div>
-
-      {/* Links */}
-      <div style={{ display: "flex", alignItems: "center", gap: "20px", flexShrink: 0 }}>
-        {links.map((l) => (
+{/* Links - hidden on mobile */}
+<div style={{ display: "flex", alignItems: "center", gap: "20px", flexShrink: 0 }}
+  className="nav-links">
+  {links.map((l) => (
           <Link key={l.href} href={l.href} style={{
             textDecoration: "none", fontSize: "13px", fontWeight: 500,
             color: pathname === l.href ? "var(--accent)" : "var(--text-secondary)",
