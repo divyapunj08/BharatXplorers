@@ -4,6 +4,7 @@ import PexelsImage from "../components/PexelsImage";
 import DownloadPDF from "../components/ItineraryPDF";
 import dynamic from "next/dynamic";
 import { supabase } from "../lib/supabase";
+import SlideshowBg from "../components/SlideshowBg";
 const TripMap = dynamic(() => import("../components/Map"), { ssr: false });
 
 const moodColors: Record<string, string> = {
@@ -29,6 +30,7 @@ function Doodles() {
   return (
     <>
       {/* Top left doodles */}
+      <SlideshowBg opacity={0.12} />
       <div style={{ position: "fixed", top: "80px", left: "10px", opacity: 0.15, pointerEvents: "none", zIndex: 0, fontSize: "24px", transform: "rotate(-20deg)" }}>✈️</div>
       <div style={{ position: "fixed", top: "160px", left: "30px", opacity: 0.1, pointerEvents: "none", zIndex: 0, fontSize: "18px", transform: "rotate(15deg)" }}>🗺️</div>
       <div style={{ position: "fixed", top: "240px", left: "15px", opacity: 0.12, pointerEvents: "none", zIndex: 0, fontSize: "22px" }}>⭐</div>
@@ -48,6 +50,7 @@ function Doodles() {
     </>
   );
 }
+
 
 export default function Planner() {
   const [form, setForm] = useState({

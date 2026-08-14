@@ -2,6 +2,8 @@
 import { useState, useEffect, Suspense } from "react";
 import PexelsImage from "../components/PexelsImage";
 import { supabase } from "../lib/supabase";
+import SlideshowBg from "../components/SlideshowBg";
+
 const POPULAR = [
   "hidden beaches", "mountain villages", "heritage forts",
   "tribal culture", "budget backpacking", "spiritual temples",
@@ -51,6 +53,7 @@ function DiscoverPage() {
 
   return (
     <div style={{ background: "var(--bg-primary)", minHeight: "100vh", color: "var(--text-primary)" }}>
+      <SlideshowBg opacity={0.12} />
 
       {/* Glow */}
       <div style={{

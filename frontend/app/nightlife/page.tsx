@@ -2,6 +2,7 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import PexelsImage from "../components/PexelsImage";
+import SlideshowBg from "../components/SlideshowBg";
 const TripMap = dynamic(() => import("../components/Map"), { ssr: false });
 
 function imgUrl(keyword: string, w = 400, h = 200) {
@@ -58,6 +59,7 @@ export default function Nightlife() {
 
   return (
     <div style={{ background: "var(--bg-primary)", minHeight: "100vh", color: "var(--text-primary)" }}>
+      <SlideshowBg opacity={0.12} />
 
       {/* Night glow */}
       <div style={{

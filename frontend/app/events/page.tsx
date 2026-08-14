@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import PexelsImage from "../components/PexelsImage";
+import SlideshowBg from "../components/SlideshowBg";
 const TripMap = dynamic(() => import("../components/Map"), { ssr: false });
 
 const MONTHS = ["January","February","March","April","May","June",
@@ -71,6 +72,8 @@ export default function Events() {
 
   return (
     <div style={{ background: "var(--bg-primary)", minHeight: "100vh", color: "var(--text-primary)" }}>
+      <SlideshowBg opacity={0.12} />
+      
 
       {/* Glow */}
       <div style={{

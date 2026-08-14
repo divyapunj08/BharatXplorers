@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { supabase } from "../lib/supabase";
-
+import SlideshowBg from "../components/SlideshowBg";
 export default function Login() {
   const [mode, setMode] = useState<"login" | "signup">("login");
   const [email, setEmail] = useState("");
@@ -39,6 +39,7 @@ export default function Login() {
       color: "var(--text-primary)", display: "flex",
       alignItems: "center", justifyContent: "center", padding: "24px"
     }}>
+      <SlideshowBg opacity={0.12} />
       <div style={{
         position: "fixed", top: 0, left: "30%", width: "600px", height: "400px",
         background: "var(--gradient)", opacity: 0.06, filter: "blur(100px)",

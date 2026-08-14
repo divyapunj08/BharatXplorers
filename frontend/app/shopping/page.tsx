@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import PexelsImage from "../components/PexelsImage";
+import SlideshowBg from "../components/SlideshowBg";
 const TripMap = dynamic(() => import("../components/Map"), { ssr: false });
 
 const CATEGORIES = [
@@ -56,7 +57,9 @@ function ShopCard({ shop, isHidden = false, onLocate }: { shop: any; isHidden?: 
       }}
       onMouseEnter={e => e.currentTarget.style.transform = "translateY(-2px)"}
       onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
+
     >
+      <SlideshowBg opacity={0.12} />
       {/* Image */}
       <div style={{ position: "relative" }}>
         <PexelsImage query={shop.name + " " + shop.city + " market india"}
