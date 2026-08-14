@@ -49,7 +49,9 @@ function imgUrl(keyword: string) {
 function ShopCard({ shop, isHidden = false, onLocate }: { shop: any; isHidden?: boolean; onLocate: (shop: any) => void }) {
   const open = isOpenNow(shop.openTime, shop.closeTime, shop.closedOn);
 
+  <SlideshowBg opacity={0.35} />
   return (
+    
     <div
       style={{
         background: "var(--bg-card)", border: `1px solid ${isHidden ? "var(--accent2)" : "var(--border)"}`,
@@ -59,7 +61,6 @@ function ShopCard({ shop, isHidden = false, onLocate }: { shop: any; isHidden?: 
       onMouseLeave={e => e.currentTarget.style.transform = "translateY(0)"}
 
     >
-      <SlideshowBg opacity={0.12} />
       {/* Image */}
       <div style={{ position: "relative" }}>
         <PexelsImage query={shop.name + " " + shop.city + " market india"}

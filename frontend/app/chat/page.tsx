@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-
+import SlideshowBg from "../components/SlideshowBg";
 type Message = { role: "user" | "assistant"; content: string };
 
 const STARTERS = [
@@ -45,14 +45,14 @@ export default function Chat() {
     setMessages([...newMessages, { role: "assistant", content: data.reply }]);
     setLoading(false);
   };
-
+  <SlideshowBg opacity={0.35} />
   return (
     <div style={{
       background: "var(--bg-primary)", minHeight: "100vh",
       color: "var(--text-primary)", display: "flex", flexDirection: "column"
     }}>
-
-      {/* Glow */}
+      
+    {/* Glow */}
       <div style={{
         position: "fixed", top: 0, left: "30%", width: "600px", height: "400px",
         background: "var(--gradient)", opacity: 0.05, filter: "blur(100px)",
