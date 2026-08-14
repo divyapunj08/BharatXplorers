@@ -68,7 +68,7 @@ export default function SlideshowBg({ opacity = 0.15 }: { opacity?: number }) {
       <div style={{
         position: "absolute", inset: 0,
         background: "var(--bg-primary)",
-        opacity: 0.85
+        opacity: 0.65
       }} />
     </div>
   );
